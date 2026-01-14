@@ -7,9 +7,12 @@ __pycache__/
 # OS
 .DS_Store
 
-# Data / Model artifacts (巨大になりやすいのでGitに入れない)
-data/
-models/
+# Data / Model artifacts（巨大になりやすいのでGitに入れない）
+data/*
+!data/.gitkeep
+models/*
+!models/.gitkeep
+
 
 # Logs / outputs
 mlruns/
