@@ -1,0 +1,16 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+
+# Data / Model artifacts (巨大になりやすいのでGitに入れない)
+data/
+models/
+
+# Logs / outputs
+mlruns/
+outputs/
