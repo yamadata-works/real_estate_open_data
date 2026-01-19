@@ -16,4 +16,4 @@ models/*
 
 # Logs / outputs
 mlruns/
-outputs/
+tmp_backup/
