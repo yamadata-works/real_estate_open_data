@@ -9,3 +9,12 @@
 
 ### 3) 上位5地区 m²単価（中央値）の四半期推移
 ![上位5地区 m²単価（中央値）の四半期推移](outputs/figures/trend_top5_median.png)
+
+## 集計結果（Tables）
+
+- 地区別 ㎡単価（全件）: [price_by_district_all.csv](outputs/tables/price_by_district_all.csv)
+- 地区別 ㎡単価（n>=30）: [price_by_district_n30.csv](outputs/tables/price_by_district_n30.csv)
+- 四半期推移（全地区）: [trend_all.csv](outputs/tables/trend_all.csv)
+- 上位5地区の推移: [trend_top5_district.csv](outputs/tables/trend_top5_district.csv)
+
+再現: notebooks/01_eda.ipynb を上から実行すると outputs/ に図表が生成されます。
