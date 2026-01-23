@@ -28,11 +28,28 @@
 
 ```bash
 python -m pip install -r requirements.txt
+```
 
-再現: notebooks/01_eda.ipynb を上から実行すると outputs/ に図表が生成されます。
+notebooks/01_eda.ipynb を上から実行すると outputs/ に図表・集計CSVが生成されます。
+
+### 補足（任意）
+- Python 3.11 を想定
+- outputs/ が無い場合は実行時に作成されます
 
 
-`pip install -r` は requirements.txt を読み込んでインストールする公式の使い方です。 :contentReference[oaicite:1]{index=1}
+　 **追加していい例**
+- 「Python 3.11 を想定」
+- 「（任意）pip install -r requirements.txt は初回だけでOK」
+- 「outputs/ が無い場合は作成されます（実行時に生成）」
+
+　 **注意**
+- もし `pip install -r requirements.txt` の行の上にある ```bash を閉じてないと、  
+  その下に書いた文章が全部 “コード扱い” になっちゃいます。
+
+今のREADMEで「再現手順」周りがどうなってるかスクショ（その部分だけ）を見せてくれたら、**“どこに追加すれば崩れないか”**をその場で指差しで言えます。
+::contentReference[oaicite:0]{index=0}
+
+`pip install -r` は requirements.txt を読み込んでインストールする公式の使い方です。 
 
 ---
 
@@ -52,3 +69,80 @@ cat requirements.txt | head
 git add requirements.txt
 git commit -m "chore: fill requirements.txt"
 git push origin main
+```
+
+# real_estate_open_data
+
+不動産オープンデータを用いて、**中古マンションの相場把握**を目的とした分析プロジェクトです。  
+本リポジトリでは、実務を想定し「データ取得 → 前処理 → EDA → SQL集計 → 可視化」を段階的に進めています。
+
+---
+
+## 目的
+
+- 市区町村別・時系列で **価格水準と分布感** を把握する
+- 価格予測や市場分析を行う前段として、  
+  **相場の全体像を整理すること**を目的とする
+
+---
+
+## 使用データ
+
+- 不動産オープンデータ（中古マンション取引情報）
+- 対象期間：複数年（四半期単位で集計）
+- 主な項目：
+  - 取引価格
+  - 専有面積
+  - 市区町村
+  - 取引時期（四半期）
+
+※ 個人情報・スクレイピングは行っていません。
+
+---
+
+## ▶実行方法（EDA）
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## EDA（探索的データ分析）の内容
+
+- ㎡単価を用いた価格水準の比較
+- 市区町村別の価格分布・件数確認
+- 四半期ごとの価格推移の可視化
+- 件数が少なすぎる市区町村を除外した分析（n≥30）
+
+---
+
+## 主な成果物（EDA）
+
+### 図表（PNG）
+- `outputs/figures/district_rank_top20.png`  
+  → 市区町村別 ㎡単価 上位ランキング  
+- `outputs/figures/trend_all_median.png`  
+  → 全体の価格推移（中央値）  
+- `outputs/figures/trend_top5_median.png`  
+  → 上位市区町村の価格推移比較  
+
+### 集計結果（CSV）
+- `outputs/tables/price_by_district_all.csv`
+- `outputs/tables/price_by_district_n30.csv`
+- `outputs/tables/trend_all.csv`
+- `outputs/tables/trend_top5_district.csv`
+
+---
+
+## ディレクトリ構成（抜粋）
+
+```text
+real_estate_open_data/
+├── notebooks/
+│   └── 01_eda.ipynb
+├── outputs/
+│   ├── figures/
+│   └── tables/
+├── data/
+├── README.md
