@@ -17,3 +17,6 @@ models/*
 # Logs / outputs
 mlruns/
 tmp_backup/
+
+# generated tables (do not commit)
+outputs/tables/*.csv
