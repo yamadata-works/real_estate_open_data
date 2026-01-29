@@ -32,29 +32,26 @@ python -m pip install -r requirements.txt
 
 notebooks/01_eda.ipynb を上から実行すると outputs/ に図表・集計CSVが生成されます。
 
+## （任意）Docker+PostgreSQLでSQL集計する手順
+
+### 前提
+- Docker Desktop が起動している
+- `docker compose ps` で `real_estate_pg` が `Up` になっている
+
 ### 補足（任意）
 - Python 3.11 を想定
 - outputs/ が無い場合は実行時に作成されます
 
-
-　 **追加していい例**
-- 「Python 3.11 を想定」
-- 「（任意）pip install -r requirements.txt は初回だけでOK」
-- 「outputs/ が無い場合は作成されます（実行時に生成）」
-
 　 **注意**
 - もし `pip install -r requirements.txt` の行の上にある ```bash を閉じてないと、  
   その下に書いた文章が全部 “コード扱い” になっちゃいます。
-
-今のREADMEで「再現手順」周りがどうなってるかスクショ（その部分だけ）を見せてくれたら、**“どこに追加すれば崩れないか”**をその場で指差しで言えます。
-::contentReference[oaicite:0]{index=0}
 
 `pip install -r` は requirements.txt を読み込んでインストールする公式の使い方です。 
 
 ---
 
 ## 2) requirements.txt は「ファイルの中に入れる」ってこと？
-はい。**requirements.txt の中身が本体**です。フォーマットは「1行に1つ」パッケージ名（必要なら `==` でバージョン固定）です。 :contentReference[oaicite:2]{index=2}
+はい。**requirements.txt の中身が本体**です。フォーマットは「1行に1つ」パッケージ名（必要なら `==` でバージョン固定）です。
 
 ---
 
@@ -146,3 +143,4 @@ real_estate_open_data/
 │   └── tables/
 ├── data/
 ├── README.md
+```
