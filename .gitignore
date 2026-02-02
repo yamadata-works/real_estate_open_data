@@ -19,9 +19,7 @@ mlruns/
 tmp_backup/
 
 # generated tables (do not commit)
-outputs/tables/*.csv
-# generated tables
-outputs/tables/*.csv
+outputs/tables/
 
-# backups
-README_backup_before_cleanup.md
+# README backups (do not commit)
+README_backup_*.md
