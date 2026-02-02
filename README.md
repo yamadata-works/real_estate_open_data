@@ -17,12 +17,24 @@
 ### 3) 上位5地区 m²単価（中央値）の四半期推移
 ![上位5地区 m²単価（中央値）の四半期推移](outputs/figures/trend_top5_median.png)
 
-## 集計結果（Tables）
+#### 上位5地区の四半期推移（中央値）の読み方
 
-- 地区別 ㎡単価（全件）: [price_by_district_all.csv](outputs/tables/price_by_district_all.csv)
-- 地区別 ㎡単価（n>=30）: [price_by_district_n30.csv](outputs/tables/price_by_district_n30.csv)
-- 四半期推移（全地区）: [trend_all.csv](outputs/tables/trend_all.csv)
-- 上位5地区の推移: [trend_top5_district.csv](outputs/tables/trend_top5_district.csv)
+* ㎡単価（中央値）で地区ごとの相場トレンドを比較（外れ値の影響が小さい）
+* 件数が少ない期はブレやすいので、複数期で傾向を確認する
+* 地区間で動きがズレる場合は、駅距離・供給・築年帯などエリア固有要因の仮説につなげる
+
+## 集計結果(Tables)
+
+※ CSV は生成物のため **Gitにはコミットしません**（.gitignore 対象）  
+ローカルで以下を実行すると `outputs/tables/` に出力されます。
+
+- 出力コマンド：`scripts/export_tables.sh`
+- 生成されるファイル：
+  - `outputs/tables/price_by_district_all.csv`
+  - `outputs/tables/price_by_district_n30.csv`
+  - `outputs/tables/trend_all.csv`
+  - `outputs/tables/trend_top5_district.csv`
+
 
 ## 再現手順
 
