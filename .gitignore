@@ -20,3 +20,8 @@ tmp_backup/
 
 # generated tables (do not commit)
 outputs/tables/*.csv
+# generated tables
+outputs/tables/*.csv
+
+# backups
+README_backup_before_cleanup.md
