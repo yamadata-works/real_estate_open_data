@@ -23,17 +23,14 @@
 * 件数が少ない期はブレやすいので、複数期で傾向を確認する
 * 地区間で動きがズレる場合は、駅距離・供給・築年帯などエリア固有要因の仮説につなげる
 
-## 集計結果(Tables)
+### 集計結果（Tables）
 
 ※ CSV は生成物のため **Gitにはコミットしません**（.gitignore 対象）  
-ローカルで以下を実行すると `outputs/tables/` に出力されます。
+ローカルで `notebooks/01_eda.ipynb`（または `scripts/export_tables.sh`）を実行すると `outputs/tables/` に出力されます。
 
-- 出力コマンド：`scripts/export_tables.sh`
-- 生成されるファイル：
-  - `outputs/tables/price_by_district_all.csv`
-  - `outputs/tables/price_by_district_n30.csv`
-  - `outputs/tables/trend_all.csv`
-  - `outputs/tables/trend_top5_district.csv`
+- 出力先：`outputs/tables/`
+- 出力形式：`*.csv`
+
 
 
 ## 再現手順
