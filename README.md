@@ -82,11 +82,33 @@
 - 出力先：`outputs/tables/`
 - 出力形式：`*.csv`
 
+## 使用言語・環境
+
+### 使用言語／クエリ
+- Python（Jupyter Notebook：集計・CSV出力・可視化）
+- SQL（PostgreSQL：View作成・集計）
+- Markdown（README整備）
+
+### 開発・実行環境
+- Mac（ローカル）
+- VS Code（Jupyter/Python実行、README編集、SQLファイル管理）
+- Python 3.11.x
+- Docker / Docker Compose（PostgreSQL環境構築）
+- PostgreSQL（DB：real_estate／ユーザー：yama）
+- psql（View確認、SQL実行）
+- Git / GitHub（成果物管理：commit/push）
+
 ## 再現手順
 
+### 1) Python環境の準備（推奨：venv）
 ```bash
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -U pip
 python -m pip install -r requirements.txt
 ```
+ここはコードではない文章です。
+
 
 notebooks/01_eda.ipynb を上から実行すると outputs/ に図表・集計CSVが生成されます。
 
