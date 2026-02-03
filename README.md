@@ -107,7 +107,6 @@ source .venv/bin/activate
 python -m pip install -U pip
 python -m pip install -r requirements.txt
 ```
-ここはコードではない文章です。
 
 
 notebooks/01_eda.ipynb を上から実行すると outputs/ に図表・集計CSVが生成されます。
