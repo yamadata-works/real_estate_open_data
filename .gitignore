@@ -23,3 +23,6 @@ outputs/tables/
 
 # README backups (do not commit)
 README_backup_*.md
+
+# Secrets
+.env
